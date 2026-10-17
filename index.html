@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sonali 💗</title>
+
+<style>
+:root {
+  --pink: #ff78b7;
+  --rose: #ffb6d5;
+  --purple: #8d65d8;
+  --ink: #fff8fc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #50326f 0, #211b3c 48%, #14152d 100%);
+  overflow-x: hidden;
+}
+
+button { font: inherit; cursor: pointer; }
+
+.sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px;
+  opacity: .55;
+  animation: floatUp linear infinite;
+  color: #ff9cc9;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-115vh) rotate(25deg); opacity: 0; }
+}
+
+.wrap { position: relative; z-index: 1; }
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-card {
+  max-width: 850px;
+  width: 100%;
+  padding: clamp(28px, 6vw, 65px) 24px;
+  border: 1px solid #ffffff30;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #ffffff14, #ffffff06);
+  box-shadow: 0 20px 80px #0003;
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffd4e8;
+  font-size: .78rem;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1.02;
+  margin: 18px 0;
+  color: #fff;
+  text-shadow: 0 0 35px #ff78b788;
+}
+
+.hero h1 span {
+  display: block;
+  color: #ffadd2;
+  font-style: italic;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.8;
+  color: #f7e8f5;
+  max-width: 610px;
+  margin: 20px auto 28px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 24px;
+  color: #321b47;
+  background: linear-gradient(100deg, #ffd1e6, #ff83bc);
+  font-weight: 800;
+  box-shadow: 0 8px 28px #ff78b744;
+  transition: .2s;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn.secondary {
+  background: #ffffff14;
+  border: 1px solid #ffffff4c;
+  color: white;
+  box-shadow: none;
+}
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 65px 22px;
+}
+
+.section h2 {
+  text-align: center;
+  font: clamp(2rem, 5vw, 3.3rem) Georgia, serif;
+  margin: 0 0 12px;
+}
+
+.sub {
+  text-align: center;
+  color: #e4cde8;
+  line-height: 1.7;
+  margin: 0 auto 35px;
+  max-width: 700px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-card, .video-card {
+  background: #ffffff12;
+  border: 1px solid #ffffff25;
+  border-radius: 22px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.photo-frame {
+  height: 280px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #784b9d, #e77eaf);
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card p {
+  text-align: center;
+  margin: 13px 4px 5px;
+  color: #ffe5f2;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.video-card video {
+  width: 100%;
+  max-height: 420px;
+  display: block;
+  object-fit: contain;
+  background: #160f22;
+  border-radius: 14px;
+}
+
+.video-card h3 {
+  text-align: center;
+  color: #ffe5f2;
+}
+
+.video-status {
+  text-align: center;
+  color: #ffe5f2;
+  font-size: .9rem;
+}
+
+.letter {
+  max-width: 800px;
+  margin: auto;
+  padding: clamp(25px, 6vw, 55px);
+  background: linear-gradient(145deg, #fff0f8, #f7d9f0);
+  color: #552d65;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px #0003;
+  text-align: center;
+}
+
+.letter .big-heart { font-size: 2.5rem; }
+
+.letter h3 {
+  font: clamp(1.8rem, 5vw, 2.8rem) Georgia, serif;
+  color: #b43e85;
+  margin: 12px 0 20px;
+}
+
+.letter p {
+  font-size: 1.08rem;
+  line-height: 1.95;
+}
+
+.cake { font-size: clamp(4rem, 12vw, 7rem); margin: 10px; }
+
+.song-panel {
+  text-align: center;
+  background: #ffffff0d;
+  border: 1px solid #ffffff25;
+  border-radius: 24px;
+  padding: 28px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.song-panel p { color: #ead8ef; line-height: 1.7; }
+
+.footer {
+  text-align: center;
+  padding: 35px 20px 55px;
+  color: #d9c2e1;
+}
+
+.footer strong { color: #ffb0d2; }
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff0f8;
+  color: #53265e;
+  padding: 12px 18px;
+  border-radius: 12px;
+  z-index: 5;
+  display: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .memory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .memory-grid { grid-template-columns: 1fr; }
+  .photo-frame { height: 320px; }
+  .section { padding: 50px 16px; }
+  .hero-card { border-radius: 24px; }
+}
+</style>
+</head>
+
+<body>
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hero" id="home">
+  <div class="hero-card">
+    <div class="eyebrow">A little magic, just for you ✨</div>
+
+    <h1>Happy Birthday <span>Sonali</span></h1>
+
+    <p>
+      To my wonderful best friend — today is all about your smile,
+      your dreams, and the beautiful person you are.
+      You deserve all the love in the world. 💗
+    </p>
+
+    <button class="btn"
+      onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+      Open Your Surprise 💌
+    </button>
+
+    <div style="margin-top:16px">
+      <button class="btn secondary" onclick="toggleMusic()" id="musicBtn">
+        ♫ Play birthday instrumental
+      </button>
+    </div>
+
+    <div style="margin-top:24px;color:#e9cde8;font-size:.9rem">
+      Made with love, hugs & a million happy wishes
+    </div>
+  </div>
+</header>
+
+<section class="section" id="memories">
+  <h2>Our Little Memories 📸</h2>
+  <p class="sub">Eight moments, a thousand memories, and one very special best friend.</p>
+
+  <div class="memory-grid">
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo1.jpg.jpeg" alt="Our favourite memory">
+      </div>
+      <p>My favourite moments 💕</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo2.jpg.jpeg" alt="Our happiest day">
+      </div>
+      <p>Our happiest day 🦋</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo3.jpg.jpeg" alt="Forever besties">
+      </div>
+      <p>Forever besties 💗</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo4.jpg.jpeg" alt="Little moments">
+      </div>
+      <p>Little moments 🎀</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo5.jpg.jpeg" alt="Precious memories">
+      </div>
+      <p>Precious memories 🌸</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo6.jpg.jpeg" alt="Beautiful friendship">
+      </div>
+      <p>Our beautiful friendship ✨</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo7.jpg.jpeg" alt="Always together">
+      </div>
+      <p>Always together 🫶</p>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <img src="photos/photo8.jpg.jpeg" alt="Birthday memories">
+      </div>
+      <p>Birthday memories 🎂</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <h2>Our Special Video Memories 🎬</h2>
+  <p class="sub">Your favourite clips together, ready to play.</p>
+
+  <div class="video-grid">
+
+    <div class="video-card">
+      <h3>Memory One 💗</h3>
+      <video controls preload="metadata" playsinline>
+        <source src="videos/video1.mp4.mp4" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+      <p class="video-status">Video 1</p>
+    </div>
+
+    <div class="video-card">
+      <h3>Memory Two 🦋</h3>
+      <video controls preload="metadata" playsinline>
+        <source src="videos/video2.mp4.mp4" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+      <p class="video-status">Video 2</p>
+    </div>
+
+    <div class="video-card">
+      <h3>Memory Three 🌸</h3>
+      <video controls preload="metadata" playsinline>
+        <source src="videos/video3.mp4.mp4" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+      <p class="video-status">Video 3</p>
+    </div>
+
+    <div class="video-card">
+      <h3>A Birthday Surprise 🎂</h3>
+      <video controls preload="metadata" playsinline>
+        <source src="videos/video4.mp4.mp4" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+      <p class="video-status">Video 4</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="wish">
+  <h2>A Letter For You 💌</h2>
+  <p class="sub">A little message from my heart to yours.</p>
+
+  <div class="letter">
+    <div class="big-heart">💖</div>
+    <h3>Dear Sonali,</h3>
+
+    <p>
+      Happy Birthday to my beautiful best friend! 🥳
+      Thank you for being a part of my life and making ordinary
+      moments feel special. I hope this new year brings you endless
+      happiness, good health, exciting adventures, and every little
+      thing your heart wishes for.
+    </p>
+
+    <p>
+      May you always have a reason to smile, courage to chase your
+      dreams, and people around you who remind you how amazing you are.
+      No matter how busy life gets, I hope we keep making silly memories
+      and laughing until our cheeks hurt.
+    </p>
+
+    <p>
+      Today and always, remember how loved and special you are.
+      Keep shining, keep smiling, and never stop being the wonderful
+      Sonali we all adore. 🌷
+    </p>
+
+    <p>
+      <strong>Happy Birthday, bestie! Lots of love, hugs, and wishes for you. 💗</strong>
+    </p>
+
+    <div style="font:italic 1.2rem Georgia,serif;margin-top:24px">
+      With love, your best friend ♡
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Make A Birthday Wish 🎂</h2>
+  <p class="sub">Close your eyes, make a wish, and let this little birthday magic begin.</p>
+
+  <div class="song-panel">
+    <div class="cake">🎂</div>
+
+    <button class="btn" onclick="celebrate()">
+      Make a Wish ✨
+    </button>
+
+    <p id="wishText">May all your sweetest dreams come true, Sonali!</p>
+
+    <button class="btn secondary" onclick="toggleMusic()" id="musicBtn2">
+      ♫ Play birthday instrumental
+    </button>
+
+    <p style="font-size:.82rem">
+      The instrumental is generated by this page and works without downloading a song.
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  Designed especially for <strong>Sonali</strong> · A birthday full of love ♡
+</footer>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* Floating hearts */
+const sky = document.getElementById('sparkles');
+
+for (let i = 0; i < 24; i++) {
+  const h = document.createElement('span');
+  h.className = 'heart';
+  h.textContent = ['♥', '♡', '✦', '✧'][i % 4];
+  h.style.left = Math.random() * 100 + '%';
+  h.style.animationDuration = (9 + Math.random() * 13) + 's';
+  h.style.animationDelay = (-Math.random() * 20) + 's';
+  h.style.fontSize = (12 + Math.random() * 24) + 'px';
+  sky.appendChild(h);
+}
+
+/* Show messages */
+function showToast(message) {
+  const el = document.getElementById('toast');
+  el.textContent = message;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 3000);
+}
+
+/* Birthday celebration */
+function celebrate() {
+  document.getElementById('wishText').textContent =
+    '✨ Birthday magic activated! May your year sparkle with love, laughter, and beautiful surprises, Sonali! 💖';
+
+  for (let i = 0; i < 28; i++) {
+    const s = document.createElement('span');
+    s.textContent = ['💗', '✨', '🎉', '🌸'][i % 4];
+
+    s.style.cssText =
+      `position:fixed;z-index:9;left:${Math.random() * 100}vw;top:-30px;font-size:${18 + Math.random() * 22}px;pointer-events:none;transition:transform 2.5s linear,opacity 2.5s linear`;
+
+    document.body.appendChild(s);
+
+    requestAnimationFrame(() => {
+      s.style.transform =
+        `translateY(${window.innerHeight + 80}px) rotate(${Math.random() * 500}deg)`;
+      s.style.opacity = '0';
+    });
+
+    setTimeout(() => s.remove(), 2700);
+  }
+
+  showToast('Your wish is on its way to the stars, Sonali! 🌟');
+}
+
+/* Birthday instrumental */
+let audioCtx = null;
+let playing = false;
+let timer = null;
+let step = 0;
+
+const notes = [
+  523.25, 523.25, 587.33, 523.25, 698.46, 659.25,
+  523.25, 523.25, 587.33, 523.25, 783.99, 698.46,
+  523.25, 523.25, 1046.5, 880, 698.46, 659.25,
+  587.33, 932.33, 932.33, 880, 698.46, 783.99, 698.46
+];
+
+function playNote(freq, duration) {
+  if (!audioCtx) return;
+
+  const now = audioCtx.currentTime;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.value = freq;
+
+  gain.gain.setValueAtTime(.0001, now);
+  gain.gain.exponentialRampToValueAtTime(.12, now + .03);
+  gain.gain.exponentialRampToValueAtTime(.0001, now + duration);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  osc.start(now);
+  osc.stop(now + duration + .03);
+}
+
+function tick() {
+  if (!playing) return;
+
+  playNote(notes[step % notes.length], .42);
+  step++;
+  timer = setTimeout(tick, 470);
+}
+
+function updateMusicButtons() {
+  const text = playing
+    ? '♫ Pause birthday instrumental'
+    : '♫ Play birthday instrumental';
+
+  document.getElementById('musicBtn').textContent = text;
+  document.getElementById('musicBtn2').textContent = text;
+}
+
+async function toggleMusic() {
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+
+    if (audioCtx.state === 'suspended') {
+      await audioCtx.resume();
+    }
+
+    playing = !playing;
+    updateMusicButtons();
+
+    if (playing) {
+      tick();
+    } else {
+      clearTimeout(timer);
+    }
+  } catch (error) {
+    showToast('Audio is not available in this browser.');
+  }
+}
+
+/* Report missing video files */
+document.querySelectorAll('.video-card video').forEach((video, index) => {
+  video.addEventListener('error', () => {
+    const status = video.parentElement.querySelector('.video-status');
+    status.textContent =
+      `Video ${index + 1} could not load. Check its filename and video format.`;
+  });
+
+  video.addEventListener('loadedmetadata', () => {
+    const status = video.parentElement.querySelector('.video-status');
+    status.textContent = `Video ${index + 1} is ready 💗`;
+  });
+});
+</script>
+
+</body>
+</html>
